@@ -1,0 +1,18 @@
+<configuration>
+    <!--
+        Different log level can be passed using -DlogLevel=INFO.
+        Default value is set to DEBUG for local runs.
+    -->
+    <variable name="LOG_LEVEL" value="${logLevel:-DEBUG}" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- methodName is set in TestBase for each test -->
+            <pattern>%d{MM-dd-yyyy HH:mm:ss.SSS} [%level] %X{methodName} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="${LOG_LEVEL}">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
