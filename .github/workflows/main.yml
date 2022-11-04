@@ -26,23 +26,17 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
+      if: ${{ github.ref != 'refs/heads/master' }}
       run: mvn clean package --file pom.xml
-      
-    - name: Cache Local Maven Repo
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-          
-    - name: Set up Maven
-      uses: s4u/maven-settings-action@v2.5.0
-      with:
-        maven-version: 3.8.3
 
-    - name: Publish to GitHub Packages Apache Maven
-      if: ${{ github.ref == 'refs/heads/master' }}
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+    - name: Release "major" version to Maven central
+      if: ${{ github.ref == 'refs/heads/master' }} && !contains(github.event.head_commit.message, 'hotfix')
+      run: mvn gitflow:release-start
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+    - name: Release "hotfix" version to Maven central
+      if: ${{ github.ref == 'refs/heads/master' }} && contains(github.event.head_commit.message, 'hotfix')
+      run: mvn gitflow:release-start
       env:
         GITHUB_TOKEN: ${{ github.token }}
