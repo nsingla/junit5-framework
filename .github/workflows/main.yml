@@ -1,7 +1,6 @@
 # This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
 
-name: Maven Deploy
+name: Maven Build & Deploy
 
 on:
   push:
@@ -9,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,22 +25,9 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean package --file pom.xml
-      
-    - name: Cache Local Maven Repo
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-          
-    - name: Set up Maven
-      uses: s4u/maven-settings-action@v2.5.0
-      with:
-        maven-version: 3.8.3
 
-    - name: Publish to GitHub Packages Apache Maven
-      if: ${{ github.ref == 'refs/heads/master' }}
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+    - name: Release to Maven central
+      if: contains(github.ref, 'release')
+      run: mvn clean deploy -DskipTests=true
       env:
         GITHUB_TOKEN: ${{ github.token }}
