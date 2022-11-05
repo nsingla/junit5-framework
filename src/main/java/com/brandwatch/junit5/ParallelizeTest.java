@@ -9,9 +9,9 @@ import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.slf4j.MDC;
 
-@ExtendWith(TestWatcher.class)
+@ExtendWith(CutomLogger.class)
 @Execution(ExecutionMode.CONCURRENT)
-public class TestBase {
+public class ParallelizeTest {
 
     protected String methodName = null;
 

@@ -8,9 +8,9 @@ import org.slf4j.MDC;
 
 import java.util.Optional;
 
-public class TestWatcher implements org.junit.jupiter.api.extension.TestWatcher {
+public class CutomLogger implements org.junit.jupiter.api.extension.TestWatcher {
 
-    private static final Logger logger = LoggerFactory.getLogger(TestWatcher.class);
+    private static final Logger logger = LoggerFactory.getLogger(CutomLogger.class);
 
     @Override
     public void testDisabled(ExtensionContext extensionContext, Optional<String> optional) {
