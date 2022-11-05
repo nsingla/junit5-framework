@@ -10,6 +10,13 @@
     <name>Junit5 Framework</name>
     <description>Framework to support parallel test runs using Junit5</description>
 
+    <repositories>
+        <repository>
+            <id>Maven-Central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
     <properties>
         <!-- Java Versions -->
         <java.version>11</java.version>
