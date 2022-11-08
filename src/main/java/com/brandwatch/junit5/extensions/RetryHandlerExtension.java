@@ -30,8 +30,6 @@ import java.util.Set;
  */
 public class RetryHandlerExtension<T extends GenericTestTemplateInvocationContext<T>> implements TestExecutionExceptionHandler, AfterEachCallback {
 
-    protected static final Logger logger = LoggerFactory.getLogger(RetryHandlerExtension.class);
-
     public static final int MAX_RETRY = Integer.parseInt(System.getProperty("retryCount", "0"));
 
     public static final Set<Class<?>> IGNORED_EXCEPTIONS = unmodifiableSet(JUnitException.class, TestAbortedException.class, SkipRetryException.class);
