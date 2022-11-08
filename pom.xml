@@ -5,24 +5,19 @@
 
     <groupId>io.github.nsingla</groupId>
     <artifactId>junit5-framework</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Junit5 Framework</name>
     <description>Framework to support parallel test runs using Junit5</description>
 
     <distributionManagement>
         <repository>
-            <id>central</id>
-            <name>Maven Central</name>
-            <url>https://repo.maven.apache.org/maven2</url>
+            <id>ossrh</id>
+            <name>Central Repository OSSRH</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-        <snapshotRepository>
-            <id>central</id>
-            <name>Maven Central</name>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </snapshotRepository>
     </distributionManagement>
-    
+
     <properties>
         <!-- Java Versions -->
         <java.version>11</java.version>
@@ -129,6 +124,33 @@
                 <configuration>
                     <trimStackTrace>false</trimStackTrace>
                     <testFailureIgnore>false</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.amashchenko.maven.plugin</groupId>
+                <artifactId>gitflow-maven-plugin</artifactId>
+                <version>1.19.0</version>
+
+                <configuration>
+                    <verbose>true</verbose>
+
+                    <skipTestProject>true</skipTestProject>
+
+                    <postReleaseGoals>deploy</postReleaseGoals>
+                    <postHotfixGoals>deploy</postHotfixGoals>
+
+                    <versionDigitToIncrement>1</versionDigitToIncrement>
+
+                    <gitFlowConfig>
+                        <developmentBranch>master</developmentBranch>
+                        <productionBranch>master</productionBranch>
+                    </gitFlowConfig>
+
+                    <commitMessages>
+                        <hotfixStartMessage>Prepare fix version @{version}</hotfixStartMessage>
+                        <releaseStartMessage>Release version @{version}</releaseStartMessage>
+                        <releaseFinishMessage>Prepare snapshot version @{version}</releaseFinishMessage>
+                    </commitMessages>
                 </configuration>
             </plugin>
         </plugins>
