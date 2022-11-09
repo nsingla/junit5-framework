@@ -33,15 +33,6 @@ import java.util.stream.StreamSupport;
 /**
  * Extension responsible of providing {@link TestTemplateInvocationContext} stream
  * for running and retrying parameterized tests.
- *
- * <p>
- *     Copy of package-private JUnit class:
- *     <p>
- *         {@code org.junit.jupiter.params.ParameterizedTestExtension}
- *     </p>
- *     with additional changes in {@link #provideTestTemplateInvocationContexts(ExtensionContext)}.
- * </p>
- *
  * @see RetryFailedParameterizedTest
  * @see RetryParameterizedTestTemplateInvocationContext
  *

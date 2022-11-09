@@ -89,9 +89,9 @@ public @interface RetryFailedParameterizedTest {
      * The display name to be used for individual invocations of the
      * parameterized test; never blank or consisting solely of whitespace.
      *
-     * <p>Defaults to {@link #DEFAULT_DISPLAY_NAME}.
+     * Defaults to {@link #DEFAULT_DISPLAY_NAME}.
      *
-     * <h4>Supported placeholders</h4>
+     * Supported placeholders
      * <ul>
      * <li>{@link #DISPLAY_NAME_PLACEHOLDER}</li>
      * <li>{@link #INDEX_PLACEHOLDER}</li>
@@ -103,6 +103,8 @@ public @interface RetryFailedParameterizedTest {
      * to customize formatting. Please note that the original arguments are
      * passed when formatting, regardless of any implicit or explicit argument
      * conversions.
+     *
+     * @return Display Name of the test
      *
      * @see java.text.MessageFormat
      */
