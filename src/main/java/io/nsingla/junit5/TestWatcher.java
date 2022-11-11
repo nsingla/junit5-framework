@@ -1,6 +1,6 @@
-package com.brandwatch.junit5;
+package io.nsingla.junit5;
 
-import com.brandwatch.junit5.utils.NamingUtils;
+import io.nsingla.junit5.utils.NamingUtils;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

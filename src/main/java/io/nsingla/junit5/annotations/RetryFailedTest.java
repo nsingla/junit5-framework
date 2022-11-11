@@ -1,6 +1,6 @@
-package com.brandwatch.junit5.annotations;
+package io.nsingla.junit5.annotations;
 
-import com.brandwatch.junit5.extensions.RetryTestExtension;
+import io.nsingla.junit5.extensions.RetryTestExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;

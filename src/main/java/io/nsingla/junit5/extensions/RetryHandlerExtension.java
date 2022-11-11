@@ -1,19 +1,14 @@
-package com.brandwatch.junit5.extensions;
+package io.nsingla.junit5.extensions;
 
 import static org.apache.commons.collections4.SetUtils.unmodifiableSet;
 
-import com.brandwatch.junit5.annotations.RetryFailedParameterizedTest;
-import com.brandwatch.junit5.extensions.internal.contexts.GenericTestTemplateInvocationContext;
+import io.nsingla.junit5.extensions.internal.contexts.GenericTestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.AfterEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;
 import org.junit.platform.commons.JUnitException;
-import org.junit.platform.commons.util.AnnotationUtils;
 import org.opentest4j.TestAbortedException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.util.Optional;
 import java.util.Set;
 
 /**

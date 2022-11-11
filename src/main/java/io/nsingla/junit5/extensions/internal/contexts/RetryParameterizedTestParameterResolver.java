@@ -1,4 +1,4 @@
-package com.brandwatch.junit5.extensions.internal.contexts;
+package io.nsingla.junit5.extensions.internal.contexts;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;

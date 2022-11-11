@@ -1,6 +1,6 @@
-package com.brandwatch.junit5;
+package io.nsingla.junit5;
 
-import com.brandwatch.junit5.utils.NamingUtils;
+import io.nsingla.junit5.utils.NamingUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInfo;

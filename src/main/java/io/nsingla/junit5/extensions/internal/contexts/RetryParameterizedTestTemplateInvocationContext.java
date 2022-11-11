@@ -1,8 +1,9 @@
-package com.brandwatch.junit5.extensions.internal.contexts;
+package io.nsingla.junit5.extensions.internal.contexts;
 
-import com.brandwatch.junit5.annotations.RetryFailedParameterizedTest;
-import com.brandwatch.junit5.extensions.RetryHandlerExtension;
-import com.brandwatch.junit5.extensions.internal.iterators.TestTemplateIterator;
+import io.nsingla.junit5.annotations.RetryFailedParameterizedTest;
+import io.nsingla.junit5.extensions.RetryHandlerExtension;
+import io.nsingla.junit5.extensions.RetryParameterizedTestExtension;
+import io.nsingla.junit5.extensions.internal.iterators.TestTemplateIterator;
 import org.junit.jupiter.api.extension.Extension;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 
@@ -15,7 +16,7 @@ import java.util.List;
  *
  * @see RetryFailedParameterizedTest
  * @see RetryHandlerExtension
- * @see com.brandwatch.junit5.extensions.RetryParameterizedTestExtension
+ * @see RetryParameterizedTestExtension
  */
 public class RetryParameterizedTestTemplateInvocationContext extends GenericTestTemplateInvocationContext<RetryParameterizedTestTemplateInvocationContext> {
 

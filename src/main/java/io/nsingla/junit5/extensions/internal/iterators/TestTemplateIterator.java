@@ -1,4 +1,4 @@
-package com.brandwatch.junit5.extensions.internal.iterators;
+package io.nsingla.junit5.extensions.internal.iterators;
 
 import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 

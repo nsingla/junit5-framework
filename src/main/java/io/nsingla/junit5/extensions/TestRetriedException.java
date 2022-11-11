@@ -1,4 +1,4 @@
-package com.brandwatch.junit5.extensions;
+package io.nsingla.junit5.extensions;
 
 import org.opentest4j.TestAbortedException;
 

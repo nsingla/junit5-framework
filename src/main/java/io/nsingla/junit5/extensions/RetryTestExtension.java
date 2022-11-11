@@ -1,10 +1,10 @@
-package com.brandwatch.junit5.extensions;
+package io.nsingla.junit5.extensions;
 
 import static java.util.Spliterators.spliteratorUnknownSize;
 
-import com.brandwatch.junit5.annotations.RetryFailedTest;
-import com.brandwatch.junit5.extensions.internal.contexts.RetryTestTemplateInvocationContext;
-import com.brandwatch.junit5.extensions.internal.iterators.TestTemplateIterator;
+import io.nsingla.junit5.annotations.RetryFailedTest;
+import io.nsingla.junit5.extensions.internal.contexts.RetryTestTemplateInvocationContext;
+import io.nsingla.junit5.extensions.internal.iterators.TestTemplateIterator;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContextProvider;

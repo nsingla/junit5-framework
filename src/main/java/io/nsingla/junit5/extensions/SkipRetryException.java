@@ -1,4 +1,4 @@
-package com.brandwatch.junit5.extensions;
+package io.nsingla.junit5.extensions;
 
 public abstract class SkipRetryException extends RuntimeException {
 

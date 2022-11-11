@@ -1,8 +1,8 @@
-package com.brandwatch.junit5.annotations;
+package io.nsingla.junit5.annotations;
 
 import static org.apiguardian.api.API.Status.STABLE;
 
-import com.brandwatch.junit5.extensions.RetryParameterizedTestExtension;
+import io.nsingla.junit5.extensions.RetryParameterizedTestExtension;
 import org.apiguardian.api.API;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;

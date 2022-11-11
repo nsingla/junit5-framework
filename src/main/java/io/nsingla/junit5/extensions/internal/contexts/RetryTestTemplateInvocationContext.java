@@ -1,8 +1,9 @@
-package com.brandwatch.junit5.extensions.internal.contexts;
+package io.nsingla.junit5.extensions.internal.contexts;
 
-import com.brandwatch.junit5.annotations.RetryFailedTest;
-import com.brandwatch.junit5.extensions.RetryHandlerExtension;
-import com.brandwatch.junit5.extensions.internal.iterators.TestTemplateIterator;
+import io.nsingla.junit5.annotations.RetryFailedTest;
+import io.nsingla.junit5.extensions.RetryHandlerExtension;
+import io.nsingla.junit5.extensions.internal.iterators.TestTemplateIterator;
+import io.nsingla.junit5.extensions.RetryTestExtension;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 
 /**
@@ -11,7 +12,7 @@ import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
  *
  * @see RetryFailedTest
  * @see RetryHandlerExtension
- * @see com.brandwatch.junit5.extensions.RetryTestExtension
+ * @see RetryTestExtension
  */
 public class RetryTestTemplateInvocationContext extends GenericTestTemplateInvocationContext<RetryTestTemplateInvocationContext> {
 

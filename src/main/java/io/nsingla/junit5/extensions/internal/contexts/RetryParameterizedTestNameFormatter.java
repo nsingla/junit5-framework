@@ -1,4 +1,4 @@
-package com.brandwatch.junit5.extensions.internal.contexts;
+package io.nsingla.junit5.extensions.internal.contexts;
 
 import static java.util.stream.Collectors.joining;
 import static org.junit.jupiter.params.ParameterizedTest.ARGUMENTS_PLACEHOLDER;

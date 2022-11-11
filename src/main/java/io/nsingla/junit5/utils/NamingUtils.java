@@ -1,4 +1,4 @@
-package com.brandwatch.junit5.utils;
+package io.nsingla.junit5.utils;
 
 import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.extension.ExtensionContext;

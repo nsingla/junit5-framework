@@ -1,7 +1,7 @@
-package com.brandwatch.junit5.extensions.internal.contexts;
+package io.nsingla.junit5.extensions.internal.contexts;
 
-import static com.brandwatch.junit5.extensions.internal.contexts.RetryParameterizedTestMethodContext.ResolverType.AGGREGATOR;
-import static com.brandwatch.junit5.extensions.internal.contexts.RetryParameterizedTestMethodContext.ResolverType.CONVERTER;
+import static io.nsingla.junit5.extensions.internal.contexts.RetryParameterizedTestMethodContext.ResolverType.AGGREGATOR;
+import static io.nsingla.junit5.extensions.internal.contexts.RetryParameterizedTestMethodContext.ResolverType.CONVERTER;
 import static org.junit.platform.commons.util.AnnotationUtils.isAnnotated;
 
 import org.junit.jupiter.api.extension.ParameterContext;

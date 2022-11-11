@@ -1,15 +1,15 @@
-package com.brandwatch.junit5.extensions;
+package io.nsingla.junit5.extensions;
 
 import static java.util.Spliterators.spliteratorUnknownSize;
 import static org.junit.platform.commons.util.AnnotationUtils.findAnnotation;
 import static org.junit.platform.commons.util.AnnotationUtils.findRepeatableAnnotations;
 import static org.junit.platform.commons.util.AnnotationUtils.isAnnotated;
 
-import com.brandwatch.junit5.annotations.RetryFailedParameterizedTest;
-import com.brandwatch.junit5.extensions.internal.contexts.RetryParameterizedTestMethodContext;
-import com.brandwatch.junit5.extensions.internal.contexts.RetryParameterizedTestNameFormatter;
-import com.brandwatch.junit5.extensions.internal.contexts.RetryParameterizedTestTemplateInvocationContext;
-import com.brandwatch.junit5.extensions.internal.iterators.TestTemplateIterator;
+import io.nsingla.junit5.annotations.RetryFailedParameterizedTest;
+import io.nsingla.junit5.extensions.internal.contexts.RetryParameterizedTestMethodContext;
+import io.nsingla.junit5.extensions.internal.contexts.RetryParameterizedTestNameFormatter;
+import io.nsingla.junit5.extensions.internal.contexts.RetryParameterizedTestTemplateInvocationContext;
+import io.nsingla.junit5.extensions.internal.iterators.TestTemplateIterator;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContextProvider;

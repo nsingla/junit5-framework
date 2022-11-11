@@ -1,4 +1,4 @@
-package com.brandwatch.junit5;
+package io.nsingla.junit5;
 
 import org.junit.platform.engine.ConfigurationParameters;
 import org.junit.platform.engine.support.hierarchical.ParallelExecutionConfiguration;
