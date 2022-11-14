@@ -5,7 +5,7 @@
 
     <groupId>io.github.nsingla</groupId>
     <artifactId>junit5-framework</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
     <packaging>jar</packaging>
     <name>Junit5 Framework</name>
     <description>Framework to support parallel test runs using Junit5</description>
